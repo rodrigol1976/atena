@@ -7,8 +7,7 @@
 import logging
 import requests
 import json
-import sys
-import platform
+import openai
 import ask_sdk_core.utils as ask_utils
 
 from ask_sdk_core.skill_builder import SkillBuilder
@@ -49,7 +48,21 @@ class AskAtenaIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Hello World! by Atena"
+        question = handler_input.request_envelope.request.intent.slots['pergunta'].value
+        
+        openai.api_key = "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"
+        
+        response = openai.Completion.create(
+            model="text-davinci-003",
+            prompt=question,
+            temperature=0,
+            max_tokens=4000,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0,
+        )
+        
+        speak_output = response.choices[0].text
 
         return (
             handler_input.response_builder
