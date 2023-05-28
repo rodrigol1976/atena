@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "modo atena",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskAtenaIntent",
+          "slots": [],
+          "samples": [
+            "diga algo"
+          ]
+        },
+        {
+          "name": "DeactivateAtenaIntent",
+          "slots": [],
+          "samples": [
+            "desativar modo atena"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "4"
+}
