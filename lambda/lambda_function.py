@@ -7,6 +7,8 @@
 import logging
 import requests
 import json
+import sys
+import platform
 import ask_sdk_core.utils as ask_utils
 
 from ask_sdk_core.skill_builder import SkillBuilder
