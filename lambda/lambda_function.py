@@ -50,7 +50,7 @@ class AskAtenaIntentHandler(AbstractRequestHandler):
         # type: (HandlerInput) -> Response
         question = handler_input.request_envelope.request.intent.slots['pergunta'].value
         
-        openai.api_key = "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"
+        openai.api_key = "chave GPT"
         
         response = openai.Completion.create(
             model="text-davinci-003",
